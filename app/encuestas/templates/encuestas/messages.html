@@ -10,7 +10,7 @@
         ×
         </button>
         <strong class="mensaje-notificacion">{{ message }}</strong>
-        <a class="link-volver" href="/encuestas">Volver a la página principal</a>
+        <a class="link-volver" href="{% url 'encuestas:encuestas' %}">Volver a la página principal</a>
       </div>
     </div>
   {% endfor %}

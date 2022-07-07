@@ -81,7 +81,7 @@
                         </td>
                         <td class="poll_actualizar">
                             {% if publicada.activa %}
-                                <a href="/modificar_encuesta/?id={{publicada.id}}">Modificar</a>
+                                <a href="{% url 'encuestas:modificar_encuesta' %}/?id={{publicada.id}}">Modificar</a>
                             {% endif %}
                         </td>
                         <td class="poll_close">
@@ -100,7 +100,7 @@
                                     <div class="modal-footer">
                                         <h3>Cerrar encuesta?</h3>
                                         <button type="button" style="cursor:pointer;" class="publicar_encuesta_btn" id="send-button_{{publicada.id}}" 
-                                            onclick="location.href= '/cerrar_encuesta/?id={{publicada.id}}'">
+                                            onclick="location.href= '{% url 'encuestas:cerrar_encuesta' %}?id={{publicada.id}}'">
                                             Cerrar encuesta
                                         </button>
                                         <button type="button" style="cursor:pointer;" id="close-button_{{publicada.id}}" class="back_btn">Volver</button>
@@ -117,7 +117,7 @@
             
         </div>
         <div class="peb">
-            <a href="/publicar_encuesta" class="publicar_encuesta_btn">Publicar Encuesta</a>
+            <a href="{% url 'encuestas:nueva_encuesta' %}" class="publicar_encuesta_btn">Publicar Encuesta</a>
         </div>
 
 
@@ -144,7 +144,7 @@
         </div>
         
         <div class="back">
-            <a href="/encuestas" class="back_btn">Inicio</a>
+            <a href="{% url 'encuestas:encuestas' %}" class="back_btn">Inicio</a>
         </div>
 
 

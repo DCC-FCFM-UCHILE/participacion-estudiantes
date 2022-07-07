@@ -20,15 +20,15 @@
     <!-- Navegation Menu start -->
     <header>
         <div class="logo">
-            <a href="/encuestas" class="logo"><img id="imagen_logo" src="{% static 'img/LogoHD.png' %}" alt="Logo2" width="170" height="40"></a>
+            <a href="{% url 'encuestas:encuestas' %}" class="logo"><img id="imagen_logo" src="{% static 'img/LogoHD.png' %}" alt="Logo2" width="170" height="40"></a>
         </div>
         
     
         <nav class="navbar">
-            <a id="encuestas" class="{% block cls_encuestas %} {% endblock %}"   href="/encuestas">Inicio</a>
-            <a id="mis_encuestas" class="{% block cls_encuesta %} {% endblock %}" href="/mis_encuestas">Mis Encuestas</a>
-            <a id="publicar" class="{% block cls_publicar %} {% endblock %}" href="/publicar_encuesta">Publicar Encuesta</a>
-            <a id="manual" class="{% block cls_manual %} {% endblock %}" href="/manual">Manual de Uso</a>
+            <a id="encuestas" class="{% block cls_encuestas %} {% endblock %}"   href="{% url 'encuestas:encuestas' %}">Inicio</a>
+            <a id="mis_encuestas" class="{% block cls_encuesta %} {% endblock %}" href="{% url 'encuestas:mis_encuestas' %}">Mis Encuestas</a>
+            <a id="publicar" class="{% block cls_publicar %} {% endblock %}" href="{% url 'encuestas:nueva_encuesta' %}">Publicar Encuesta</a>
+            <a id="manual" class="{% block cls_manual %} {% endblock %}" href="{% url 'encuestas:manual' %}">Manual de Uso</a>
         </nav>
     
         <div class="user">
@@ -43,8 +43,8 @@
                 {% endif %}
                 <div class="close_session_nv" id="close_session">
                     <div class="cuser usuario">Cuenta</div>
-                    <div class="cuser"> <a href=/manual#publicar1 >¿Cómo publicar una encuesta?</a> </div>
-                    <div class="cuser"> <a href=/manual#responder1 >¿Cómo obtener puntos?</a> </div>
+                    <div class="cuser"> <a href={% url 'encuestas:manual' %}#publicar1 >¿Cómo publicar una encuesta?</a> </div>
+                    <div class="cuser"> <a href={% url 'encuestas:manual' %}#responder1 >¿Cómo obtener puntos?</a> </div>
                     <div class="cuser2"> <a href="javascript:;" onclick="reportar()">Reportar Mal Uso</a> </div>
                     <a href="{% url 'encuestas:cerrar_sesion' %}" class="close_session_btn">Cerrar Sesión</a>
                 </div>
