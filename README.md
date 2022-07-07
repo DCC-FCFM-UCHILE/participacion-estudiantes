@@ -1,6 +1,6 @@
-# django-boilerplate
+# participacion-estudiantes
 
-Este boilerplate para Django está construido utilizando el framework Django 4.x siguiendo algunas de las prácticas recomendadas en Two Scoops of Django 3.x. La documentación oficial de Django en conjunto con las buenas prácticas documentadas en el libro son recomendadas antes de modificar este proyecto.
+
 
 ## Integración MiUchile
 
@@ -17,7 +17,7 @@ indicando los RUTs de los integrantes del equipo.
 Al clonar un proyecto basado en este template recuerde hacerlo usando la opción `--recursive` para que se descargue junto con el submodulo django_sso.
 
 ```console
-git clone --recursive git@github.com:DCC-FCFM-UCHILE/django-boilerplate.git
+git clone --recursive git@github.com:DCC-FCFM-UCHILE/participacion-estudiantes.git
 ```
 
 ### Automatización
@@ -47,9 +47,16 @@ dev@DCC ~/.docker/ $ docker-compose up -d --build
 dev@DCC ~/.docker/ $ docker exec django python manage.py migrate
 dev@DCC ~/.docker/ $ docker exec -it django python manage.py createsuperuser
 ```
-### Links encuestas ejemplo
 
-https://forms.gle/CKRFW9gjEKcCh3Rx5
-https://forms.gle/tMByeGjx24V8QHGG7
-https://docs.google.com/forms/d/e/1FAIpQLSenkP4BXTdQlDT2EycmcP4bIajaSKsjDH3IgJfMZ_1Ysw-7Iw/viewform
-https://docs.google.com/forms/d/e/1FAIpQLSdcaf5neIBNI2hBvDFLFQPeJ4czRDksUE9SCxcSZDwmI6WhqQ/viewform
+## Colaboradoras y colaboradores del Proyecto
+
+- Alejandro Torres - alejandro.torres.s@ug.uchile.cl
+- Benjamín Avendaño - benjamin.avendano@ing.uchile.cl
+- Benjamín Herrera - benjamin.herrera@ing.uchile.cl
+- Camila Labarca - camila.labarca@ug.uchile.cl
+- Germán Urrea - g.urrea.mansilla@gmail.com
+- Mario Pineda - mario.pineda@ug.uchile.cl
+- Monserrat Prado - monserrat.prado@ug.uchile.cl
+- Ricardo Valdivia - Ricardo.valdivia22@gmail.com 
+- Sebastián Contreras - scaphismm@gmail.com
+
