@@ -11,14 +11,14 @@ services:
         environment: 
             POSTGRES_USER: desarrollo
             POSTGRES_PASSWORD: desarroll0
-            POSTGRES_DB: boilerplate
+            POSTGRES_DB: participacion_estudiantes
         healthcheck:
             test: ["CMD-SHELL", "pg_isready -U desarrollo -d pgdevdb"]
             interval: 10s
             timeout: 5s
             retries: 5
     django:
-        container_name: django_boilerplate
+        container_name: participacion-estudiantes
         build: 
             context: ../
             dockerfile: .docker/app/Dockerfile

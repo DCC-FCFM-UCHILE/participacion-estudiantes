@@ -1,11 +1,11 @@
 # makefile
 
 build:
-	docker-compose -f dc-produccion.yml up -d --build --force-recreate --remove-orphans
+	docker-compose --file dc-produccion.yml --project-name participacion-estudiantes up -d --build --force-recreate --remove-orphans
 	docker ps
 
 restart:
-	docker restart django_boilerplate
+	docker restart participacion-estudiantes
 	docker ps
 
 update:
@@ -15,22 +15,22 @@ update:
 	git stash pop
 
 static:
-	docker exec django_boilerplate python manage.py collectstatic --no-input
+	docker exec participacion-estudiantes python manage.py collectstatic --no-input
 
 # loaddata:
-# 	docker exec django_boilerplate make loaddata
+# 	docker exec participacion-estudiantes make loaddata
 
 # backup:
-# 	docker exec django_boilerplate make backup
+# 	docker exec participacion-estudiantes make backup
 
 media:
-	sudo cp -r ../media/* /home/instalar/media/django_boilerplate
+	sudo cp -r ../media/* /home/instalar/media/participacion-estudiantes
 
 migrate:
-	docker exec django_boilerplate python manage.py migrate
+	docker exec participacion-estudiantes python manage.py migrate
 
 ssh:
-	docker exec -it django_boilerplate bash
+	docker exec -it participacion-estudiantes bash
 
 deploy:
 	make update
@@ -45,4 +45,4 @@ _secret:
 	./app/secret.sh
 
 __media:
-	sudo cp -r ../media/* /home/instalar/media/django_boilerplate/
+	sudo cp -r ../media/* /home/instalar/media/participacion-estudiantes/

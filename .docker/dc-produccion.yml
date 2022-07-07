@@ -4,16 +4,16 @@ services:
     django:
         networks:
             - nginx-proxy
-        container_name: django_boilerplate
+        container_name: participacion-estudiantes
         hostname: apps.dcc.uchile.cl
         build: 
             context: ../
             dockerfile: .docker/app/Dockerfile
         command: gunicorn --workers 4 --bind :8000 core.wsgi
         volumes:
-            - /home/instalar/static/django_boilerplate/:/static/:rw
-            - /home/instalar/media/django_boilerplate/:/media/:rw
-            - /home/instalar/logs/django_boilerplate:/logs:rw
+            - /home/instalar/static/participacion-estudiantes/:/static/:rw
+            - /home/instalar/media/participacion-estudiantes/:/media/:rw
+            - /home/instalar/logs/participacion-estudiantes:/logs:rw
             - /etc/timezone:/etc/timezone:ro
             - /etc/localtime:/etc/localtime:ro
         expose:
